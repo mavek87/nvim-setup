@@ -20,6 +20,16 @@ ctrl + xo ===> autocomplete text (just in insert mode!!!)
 
 ## Other interesting plugins not used:
 
+- https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim - Neovim plugin to manage the file system and other tree like structures.
+
+- https://github.com/j-hui/fidget.nvim - cool notifications
+
+- https://dotfyle.com/plugins/windwp/nvim-ts-autotag - auto close tags (html/css)
+
+- https://github.com/sindrets/diffview.nvim - diff
+ 
+- https://github.com/folke/trouble.nvim - highligt errors
+
 - https://github.com/jay-babu/mason-null-ls.nvim - Automatic install formatter and prettier mason?
 
 - https://github.com/neoclide/coc.nvim   -  VSCode experience in neovim
