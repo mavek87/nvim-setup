@@ -10,9 +10,9 @@ return {
 				icons_enabled = true,
 				theme = "catppuccin",
 			},
-			winbar = {
-				lualine_a = { "buffers" },
-			},
+			--winbar = {
+			--	lualine_a = { "buffers" },
+			--},
 		})
 	end,
 }
