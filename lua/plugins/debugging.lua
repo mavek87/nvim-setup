@@ -9,7 +9,7 @@ return {
 	},
 	config = function()
 		require("dapui").setup()
-	  require("dap-go").setup()
+		require("dap-go").setup()
 
 		local dap, dapui = require("dap"), require("dapui")
 
