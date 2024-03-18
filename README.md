@@ -1,4 +1,4 @@
-# Mavek Neovim Config
+# My Neovim Config
 
 ## Useful shortcuts:
 
