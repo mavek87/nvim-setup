@@ -8,7 +8,8 @@ ctrl + xo ===> autocomplete text (just in insert mode!!!)
 ## Useful Commands:
 
 - :checkhealt | verify nvim integrity
-- :Mason
+- :Lazy       | open Lazy packet manager menu
+- :Mason      | open Mason menu
 - :LspInfo  | print info about language recognized for file
 
 
