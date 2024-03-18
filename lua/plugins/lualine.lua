@@ -7,7 +7,15 @@ return {
 	config = function()
 		require("lualine").setup({
 			--theme = "dracula",
-			theme = "cattppuccin",
+
+			--theme = "cattppuccin",
+
+			options = {
+				theme = "cattppuccin",
+			},
+			winbar = {
+				lualine_a = { "buffers" },
+			},
 		})
 	end,
 }
