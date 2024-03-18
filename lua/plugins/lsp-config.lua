@@ -11,14 +11,14 @@
 return {
 	{
 		"williamboman/mason.nvim",
-    lazy = false,
+		lazy = false,
 		config = function()
 			require("mason").setup()
 		end,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-    lazy = false,
+		lazy = false,
 		config = function()
 			require("mason-lspconfig").setup({
 				automatic_installation = true,
@@ -50,6 +50,9 @@ return {
 					--"gopls",                         -- go
 				},
 			})
+
+      -- The next code would avoid ALL the manual setups in nvim-lspconfig, BUT I dont know how to apply capabilities here...
+			--[[
 			require("mason-lspconfig").setup_handlers({
 				function(server_name) -- default handler (optional)
 					-- The first entry (without a key) will be the default handler
@@ -62,15 +65,37 @@ return {
 					--end
 				end,
 			})
+      --]]
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
-    lazy = false,
+		lazy = false,
 		config = function()
-			--local lspconfig = require("lspconfig")
-			--lspconfig.lua_ls.setup({})
-			--lspconfig.tsserver.setup({})
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local lspconfig = require("lspconfig")
+			lspconfig.lua_ls.setup({ capabilities = capabilities })
+			lspconfig.jdtls.setup({ capabilities = capabilities })
+			lspconfig.kotlin_language_server.setup({ capabilities = capabilities })
+			lspconfig.gradle_ls.setup({ capabilities = capabilities })
+			lspconfig.groovyls.setup({ capabilities = capabilities })
+			lspconfig.vtsls.setup({ capabilities = capabilities })
+			lspconfig.bashls.setup({ capabilities = capabilities })
+			lspconfig.jsonls.setup({ capabilities = capabilities })
+			lspconfig.yamlls.setup({ capabilities = capabilities })
+			lspconfig.lemminx.setup({ capabilities = capabilities })
+			lspconfig.html.setup({ capabilities = capabilities })
+			lspconfig.cssls.setup({ capabilities = capabilities })
+			lspconfig.dockerls.setup({ capabilities = capabilities })
+			lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
+			lspconfig.taplo.setup({ capabilities = capabilities })
+			--lspconfig.tailwindcss.setup({ capabilities = capabilities })
+			lspconfig.sqlls.setup({ capabilities = capabilities })
+			lspconfig.terraformls.setup({ capabilities = capabilities })
+			lspconfig.marksman.setup({ capabilities = capabilities })
+			lspconfig.ansiblels.setup({ capabilities = capabilities })
+			lspconfig.eslint.setup({ capabilities = capabilities })
+			lspconfig.clangd.setup({ capabilities = capabilities })
 
 			vim.keymap.set("n", "<leader>doc", vim.lsp.buf.hover, {})
 			-- non so cosa fa:
