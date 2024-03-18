@@ -136,7 +136,7 @@ return {
 				},
 			})
 
-			vim.keymap.set("n", "<leader>ft", vim.lsp.buf.format, {})
+			vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {})
 		end,
 	},
 }

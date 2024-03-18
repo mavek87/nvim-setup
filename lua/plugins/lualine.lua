@@ -6,12 +6,9 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		require("lualine").setup({
-			--theme = "dracula",
-
-			--theme = "cattppuccin",
-
 			options = {
-				theme = "cattppuccin",
+				icons_enabled = true,
+				theme = "catppuccin",
 			},
 			winbar = {
 				lualine_a = { "buffers" },
