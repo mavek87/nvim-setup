@@ -1,0 +1,50 @@
+
+in command mode: 
+
+u => undo
+w => go to the next word (at the beginning)
+e => go to the next word (at the end)
+b => go to previous word (at the beginning)
+yy => copy line
+dd => remove line (and also copy the content) 
+p => paste copied data below the current row
+P => paste copied data over the current row
+f + <char> or t + <char> => go until next <char>
+ddp => switch line (switch the upper line with the bottom one)
+x over a comment => remove commented line
+G => go to the end of the document
+gg => go at the end of the first line of the document
+ci" => change all inside of "" (is also ok with any other symbol like parenthesis)
+di" => delete all the content inside "" (is also ok with any other symbol like parenthesis)
+yi" => copy all the content inside "" (is also ok with any other symbol like parenthesis)
+dG => if you are on line 1 delete all until the end of the doc (all)
+dgg => if you are on the last line delete all from end to the beginning (all)
+ctrl+a => increment number (like in variables or other)
+ctrl+x => decrement number
+ctrl+w c => close window
+
+:h => help (you can add some keys after :h to het help)
+:set nu=> set line number
+:set nonu => remove line numbers
+:set spell => check spell errors
+
+.......................................................
+
+in insert mode:
+
+ctrl+w => remove the word preceding the cursor (or part of the word preceding it) 
+
+.......................................................
+
+in visual mode:
+
+v => press v at the beginning of text you want to copy and THEN move cursor to the end of what you want to copy by scrolling and press y to paste
+U => convert selected text to uppercase
+u => convert selected text to lowercase
+
+vi( => visual mode (v) + inside (i) character like ( or { or anything else
+
+.......................................................
+
+https://docs.oracle.com/cd/E19620-01/802-7642/6ib8ghclt/index.html
+
